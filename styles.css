@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Open Sans;
+    color: white;
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid black;
+    
+}
+
+.footer ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.main {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.title {
+    font-family: Archivo Black;
+    font-size: 5em;
+}
+
+.intro {
+
+}
+
+.banner {
+    width: 1000px;
+}
+
+/* Styles for folder layout */
+
+.binder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    border: 1px solid black;
+    width: 1000px;
+    height: 700px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.folder1 {
+    border-radius: 10px;
+    background-color: white;
+    width: 800px;
+    height: 575px;
+}
+
+.tab1 {
+    background-color: white;
+    border-radius: 0 0 7px 7px;
+    height: 40px;
+    width: 175px;
+    margin: 0 0 0 15px;
+    
+}
