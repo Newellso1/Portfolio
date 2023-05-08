@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -30,8 +32,19 @@ body {
 }
 
 /* Styles for the folders */
+.folder1  {
+    filter: drop-shadow(0 5px 15px #f2eded27);
+    z-index: 4;
+    position: absolute;
+    user-select: none;
+}
 
-.file1 {
+.folder2 {
+    z-index: 5;
+    filter: drop-shadow(0 5px 15px #f2eded27);
+}
+
+.file {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -40,17 +53,25 @@ body {
     padding: 10px;
     width: 1500px;
     height: 750px;
+    
 }
 
 
-.tab1 {
+.tab {
     background-color: white;
     border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 175px;
     height: 50px;
     bottom: 5px;
     left: 50px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    user-select: none;
 }
 
 /* Styles for landing page */
@@ -79,6 +100,42 @@ body {
 
 @keyframes typing {
     from {width: 0ch;}
+}
+
+/* Styles for About Page */
+
+.file2 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.file2 h1 {
+    font-size: 10em;
+    font-weight: 1000;
+    letter-spacing: -20px;
+    word-spacing: 30px;
+    padding: 35px 0 0 10px;
+}
+
+.file2 h2 {
+    font-size: 2em;
+    margin: 30px 0 0 10px;
+    word-spacing: 2px;
+}
+
+.file2 p {
+    font-size: 1.5em;
+    margin: 0 0 0 10px;
+    width: 900px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.tab2 {
+    left: 255px;
 }
 /* Styles for the footer */
 
