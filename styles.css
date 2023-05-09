@@ -34,13 +34,20 @@ body {
 /* Styles for the folders */
 .folder1  {
     filter: drop-shadow(0 5px 15px #f2eded27);
-    z-index: 4;
+    z-index: 3;
     position: absolute;
     user-select: none;
 }
 
 .folder2 {
+    position: absolute;
+    z-index: 2;
+    filter: drop-shadow(0 5px 15px #f2eded27);
+}
+
+.folder3 {
     z-index: 5;
+    position: relative;
     filter: drop-shadow(0 5px 15px #f2eded27);
 }
 
@@ -137,6 +144,106 @@ body {
 .tab2 {
     left: 255px;
 }
+
+/* Styles for projects page */
+
+.file3 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.file3 h1 {
+    font-size: 10em;
+    font-weight: 1000;
+    letter-spacing: -20px;
+    word-spacing: 30px;
+    padding: 35px 0 0 10px;
+}
+
+.file3 h2 {
+    font-size: 2em;
+    margin: 30px 0 0 15px;
+    word-spacing: 2px;
+}
+
+.file3 p {
+    font-size: 1.5em;
+    margin: 0 0 0 10px;
+    width: 900px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.projects {
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    width: 1400px;
+    height: 350px;
+    margin: 10px 0 0 15px;
+    border: 1px solid black;
+}
+
+
+
+.Magic8Ball {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    transition: all 1s ease;
+}
+
+.TicTacToe {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    transition: all 1s ease;
+}
+
+.HeadstoneTool {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    transition: all 1s ease;
+}
+
+
+.projectHover:hover {
+    height: 350px;
+}
+
+
+.cardTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+}
+
+.cardDescription {
+    width: 400px;
+    height: 250px;
+    max-height: 250px;
+    /* color: #f2eded00; */
+    /* opacity: 0; */
+    transition: opacity 1s ease;
+    text-align: center;
+}
+
+.cardDescription:hover {
+    opacity: 100;
+    color: black
+}
+
+.tab3 {
+    left: 460px;
+}
+
 /* Styles for the footer */
 
 .footer {
