@@ -28,11 +28,11 @@ body {
 
 .binder {
     display: flex;
-    
+
 }
 
 /* Styles for the folders */
-.folder1  {
+.folder1 {
     filter: drop-shadow(0 5px 15px #f2eded27);
     z-index: 3;
     position: absolute;
@@ -60,7 +60,7 @@ body {
     padding: 10px;
     width: 1500px;
     height: 750px;
-    
+
 }
 
 
@@ -102,11 +102,13 @@ body {
     left: 20px;
     text-transform: uppercase;
     animation: typing 1.8s steps(100);
-    
+
 }
 
 @keyframes typing {
-    from {width: 0ch;}
+    from {
+        width: 0ch;
+    }
 }
 
 /* Styles for About Page */
@@ -163,82 +165,91 @@ body {
     padding: 35px 0 0 10px;
 }
 
-.file3 h2 {
-    font-size: 2em;
-    margin: 30px 0 0 15px;
-    word-spacing: 2px;
-}
-
-.file3 p {
-    font-size: 1.5em;
-    margin: 0 0 0 10px;
-    width: 900px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-}
-
-.projects {
+.projectContainer {
     display: flex;
+    align-self: center;
     justify-content:space-between;
     align-items: flex-end;
-    width: 1400px;
-    height: 350px;
-    margin: 10px 0 0 15px;
-    border: 1px solid black;
+    width: 95%;
+    height: 300px;
+    overflow: hidden;
 }
 
-
-
-.Magic8Ball {
-    width: 400px;
-    height: 100px;
-    border: 1px solid black;
-    transition: all 1s ease;
-}
-
-.TicTacToe {
-    width: 400px;
-    height: 100px;
-    border: 1px solid black;
-    transition: all 1s ease;
-}
-
-.HeadstoneTool {
-    width: 400px;
-    height: 100px;
-    border: 1px solid black;
-    transition: all 1s ease;
-}
-
-
-.projectHover:hover {
-    height: 350px;
-}
-
-
-.cardTitle {
+.card1, .card2, .card3 {
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
+    width: 30%;
+    height: 300px;
+    text-transform: none;
+    text-align: left;
+    transform: translate(0, 240px);
+    transition: transform 0.7s ease;
+}
+
+.card1:hover{
+    transform: translate(0, 0);
+}
+.card2:hover{
+    transform: translate(0, 0);
+}
+.card3:hover{
+    transform: translate(0, 0);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 100px;
-    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
 }
 
-.cardDescription {
-    width: 400px;
-    height: 250px;
-    max-height: 250px;
-    /* color: #f2eded00; */
-    /* opacity: 0; */
-    transition: opacity 1s ease;
-    text-align: center;
+.content {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 
-.cardDescription:hover {
-    opacity: 100;
-    color: black
+.card1:hover .content {
+    opacity: 100%;
 }
+.card2:hover .content {
+    opacity: 100%;
+}
+.card3:hover .content {
+    opacity: 100%;
+}
+
+.projectLink {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: black;
+    text-decoration: underline;
+    transition: opacity 2s ease;
+    opacity: 0;
+}
+
+.card1:hover .projectLink {
+    opacity: 100%;
+}
+.card2:hover .projectLink {
+    opacity: 100%;
+}
+.card3:hover .projectLink {
+    opacity: 100%;
+}
+
+.file3 h2 {}
+
+.file3 p {}
+
 
 .tab3 {
     left: 460px;
