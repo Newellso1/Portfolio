@@ -28,27 +28,34 @@ body {
 
 .binder {
     display: flex;
-
+    flex-direction: column;
 }
 
 /* Styles for the folders */
 .folder1 {
-    filter: drop-shadow(0 5px 15px #f2eded27);
-    z-index: 3;
+    /* filter: drop-shadow(0 5px 15px #f2eded27); */
+    z-index: 1;
     position: absolute;
-    user-select: none;
+    
+    
 }
 
 .folder2 {
     position: absolute;
-    z-index: 2;
-    filter: drop-shadow(0 5px 15px #f2eded27);
+    z-index: 0;
+    /* filter: drop-shadow(0 5px 15px #f2eded27); */
 }
 
 .folder3 {
-    z-index: 5;
+    z-index: 0;
+    position: absolute;
+    /* filter: drop-shadow(0 5px 15px #f2eded27); */
+}
+
+.folder4 {
+    z-index: 0;
     position: relative;
-    filter: drop-shadow(0 5px 15px #f2eded27);
+    /* filter: drop-shadow(0 5px 15px #f2eded27); */
 }
 
 .file {
@@ -65,20 +72,20 @@ body {
 
 
 .tab {
-    background-color: white;
-    border-radius: 0 0 5px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    justify-content: center;
+    align-items: center;
     width: 175px;
     height: 50px;
-    bottom: 5px;
-    left: 50px;
     font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
-    user-select: none;
+    
+    /* user-select: none; */
 }
 
 /* Styles for landing page */
@@ -143,9 +150,6 @@ body {
     word-spacing: 2px;
 }
 
-.tab2 {
-    left: 255px;
-}
 
 /* Styles for projects page */
 
@@ -246,13 +250,58 @@ body {
     opacity: 100%;
 }
 
-.file3 h2 {}
-
-.file3 p {}
 
 
+/* Styles for contact page */
+
+.file4 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.file4 h1 {
+    font-size: 10em;
+    font-weight: 1000;
+    letter-spacing: -20px;
+    word-spacing: 30px;
+    padding: 35px 0 0 10px;
+}
+
+
+
+/* Styles for tabs */
+
+.tabs{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    bottom: 5px;
+}
+
+
+.tab1 {
+    position: relative;    
+}
+
+.tab2 {
+    position: relative;
+    right: 100px;
+    
+}
 .tab3 {
-    left: 460px;
+    position: relative;
+    right: 200px;
+   
+}
+.tab4 {
+    position: relative;
+    width: 300px;
 }
 
 /* Styles for the footer */
