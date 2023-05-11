@@ -33,29 +33,24 @@ body {
 
 /* Styles for the folders */
 .folder1 {
-    /* filter: drop-shadow(0 5px 15px #f2eded27); */
     z-index: 1;
     position: absolute;
-    
-    
+    user-select: none;
 }
 
 .folder2 {
     position: absolute;
     z-index: 0;
-    /* filter: drop-shadow(0 5px 15px #f2eded27); */
 }
 
 .folder3 {
     z-index: 0;
     position: absolute;
-    /* filter: drop-shadow(0 5px 15px #f2eded27); */
 }
 
 .folder4 {
     z-index: 0;
     position: relative;
-    /* filter: drop-shadow(0 5px 15px #f2eded27); */
 }
 
 .file {
@@ -65,9 +60,8 @@ body {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
-    width: 1500px;
-    height: 750px;
-
+    width: 1000px;
+    height: 500px;
 }
 
 
@@ -79,20 +73,20 @@ body {
     border-radius: 0 0 5px 5px;
     justify-content: center;
     align-items: center;
-    width: 175px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
+    font-size: 0.65em;
     font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
-    
-    /* user-select: none; */
+    user-select: none;
 }
 
 /* Styles for landing page */
 
 .landingTitle {
     width: 8ch;
-    font-size: 16em;
+    font-size: 10em;
     font-weight: 1000;
     overflow: hidden;
     letter-spacing: -20px;
@@ -102,10 +96,10 @@ body {
 .landingTitle p {
     width: 100ch;
     font-family: Open Sans;
-    font-size: 30px;
+    font-size: 18px;
     letter-spacing: 3px;
     position: relative;
-    bottom: 60px;
+    bottom: 30px;
     left: 20px;
     text-transform: uppercase;
     animation: typing 1.8s steps(100);
@@ -129,7 +123,7 @@ body {
 }
 
 .file2 h1 {
-    font-size: 10em;
+    font-size: 6em;
     font-weight: 1000;
     letter-spacing: -20px;
     word-spacing: 30px;
@@ -137,17 +131,17 @@ body {
 }
 
 .file2 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 30px 0 0 10px;
     word-spacing: 2px;
 }
 
 .file2 p {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0 0 0 10px;
     width: 900px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
 }
 
 
@@ -162,11 +156,11 @@ body {
 }
 
 .file3 h1 {
-    font-size: 10em;
+    font-size: 6em;
     font-weight: 1000;
     letter-spacing: -20px;
     word-spacing: 30px;
-    padding: 35px 0 0 10px;
+    padding: 35px 0 0 10px;;
 }
 
 .projectContainer {
@@ -175,7 +169,7 @@ body {
     justify-content:space-between;
     align-items: flex-end;
     width: 95%;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -184,18 +178,18 @@ body {
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 300px;
+    height: 250px;
     text-transform: none;
     text-align: left;
-    transform: translate(0, 240px);
+    transform: translate(0, 210px);
     transition: transform 0.7s ease;
 }
 
 .card1:hover{
-    transform: translate(0, 0);
+    transform: translate(0, 95px);
 }
 .card2:hover{
-    transform: translate(0, 0);
+    transform: translate(0, 95px);
 }
 .card3:hover{
     transform: translate(0, 0);
@@ -207,17 +201,20 @@ body {
     align-items: center;
     letter-spacing: 2px;
     width: 100%;
-    height: 60px;
-    border: 1px solid black;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px 5px 0 0;
+
 }
 
 .content {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 1em;
+    font-size: 0.7em;
     padding: 10px;
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 1s ease-in;
+    
 }
 
 .card1:hover .content {
@@ -231,6 +228,7 @@ body {
 }
 
 .projectLink {
+    font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px;
@@ -263,10 +261,10 @@ body {
 }
 
 .file4 h1 {
-    font-size: 10em;
+    font-size: 6em;
     font-weight: 1000;
-    letter-spacing: -20px;
-    word-spacing: 30px;
+    letter-spacing: -9px;
+    word-spacing: 10px;
     padding: 35px 0 0 10px;
 }
 
@@ -291,17 +289,17 @@ body {
 
 .tab2 {
     position: relative;
-    right: 100px;
+    right: 90px;
     
 }
 .tab3 {
     position: relative;
-    right: 200px;
+    right: 180px;
    
 }
 .tab4 {
     position: relative;
-    width: 300px;
+    width: 200px;
 }
 
 /* Styles for the footer */
@@ -310,11 +308,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 50px;
     border: 1px solid black;
 }
 
 .footer a {
+    font-size: 0.8em;
     margin: 0 50px;
     letter-spacing: 2px;
     color: inherit;
