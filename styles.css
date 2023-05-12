@@ -427,7 +427,7 @@ body {
     }
 
     .file {
-        width: 370px;
+        width: 335px;
     }
 
     .tabs {
@@ -443,7 +443,7 @@ body {
     .landingTitle p {
         margin: 50px 0 0 0;
         font-size: 15px;
-        width: 350px;
+        width: 300px;
         height: 150px;
         line-height: 25px;
     }
@@ -456,7 +456,7 @@ body {
 
     .file2 p {
         font-size: 12px;
-        width: 300px;
+        width: 290px;
     }
 
     /* Projects Page */

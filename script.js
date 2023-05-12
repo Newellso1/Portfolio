@@ -1,4 +1,4 @@
-let activePage = 4;
+let activePage = 1;
 const titleTab = document.querySelector('.tab1');
 const aboutTab = document.querySelector('.tab2');
 const projectsTab = document.querySelector('.tab3');
@@ -13,22 +13,22 @@ const contactPage = document.querySelector('.folder4');
 // Functions for bringing the selected tab to the forefront
 
 function titleFront() {
-    activePage ++;
+    activePage++;
     titlePage.style.zIndex = activePage;
 }
 
 function aboutFront() {
-    activePage ++;
+    activePage++;
     aboutPage.style.zIndex = activePage;
 }
 
 function projectsFront() {
-    activePage ++;
+    activePage++;
     projectsPage.style.zIndex = activePage;
 }
 
 function contactFront() {
-    activePage ++;
+    activePage++;
     contactPage.style.zIndex = activePage;
 }
 
@@ -40,17 +40,49 @@ contactTab.addEventListener('click', contactFront);
 // .JS for mobile device
 
 const leftButton = document.querySelector('.left');
-const rightButton = document.querySelector('.right')
+const rightButton = document.querySelector('.right');
 
-const titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
-const aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
-const projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
-const contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+let titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
+let aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
+let projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
+let contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+
+function indexReset() {
+    titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
+    aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
+    projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
+    contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+}
 
 function rightButtonSwitch() {
-    if (titleIndex === 1) {
-        console.log ("New Page")
-    } else {
-        console.log("Stay here")
+    if (titleIndex >= activePage &&
+        aboutIndex < activePage &&
+        projectsIndex < activePage &&
+        contactIndex < activePage) {
+        activePage++;
+        aboutPage.style.zIndex = activePage;
+        indexReset();
+    } else if (titleIndex < activePage &&
+        aboutIndex >= activePage &&
+        projectsIndex < activePage &&
+        contactIndex < activePage) {
+        activePage++;
+        projectsPage.style.zIndex = activePage;
+        indexReset();
+    } else if (titleIndex < activePage &&
+        aboutIndex < activePage &&
+        projectsIndex >= activePage &&
+        contactIndex < activePage) {
+        activePage++;
+        contactPage.style.zIndex = activePage;
+        indexReset()
     }
 }
+
+function leftButtonSwitch() {
+    console.log('go left');
+}
+
+
+rightButton.addEventListener('click', rightButtonSwitch);
+leftButton.addEventListener('click', leftButtonSwitch);
