@@ -12,6 +12,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+
 }
 
 .main {
@@ -161,26 +162,30 @@ body {
     font-weight: 1000;
     letter-spacing: -15px;
     word-spacing: 30px;
-    padding: 35px 0 0 10px;;
+    padding: 35px 0 0 10px;
+    ;
 }
 
 .file3 p {
     margin: 0 0 0 10px;
     width: 600px;
     height: 100px;
-    
+
 }
+
 .projectContainer {
     display: flex;
     align-self: center;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: flex-end;
     width: 95%;
     height: 250px;
     overflow: hidden;
 }
 
-.card1, .card2, .card3 {
+.card1,
+.card2,
+.card3 {
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
@@ -192,13 +197,15 @@ body {
     transition: transform 0.7s ease;
 }
 
-.card1:hover{
+.card1:hover {
     transform: translate(0, 92px);
 }
-.card2:hover{
+
+.card2:hover {
     transform: translate(0, 107px);
 }
-.card3:hover{
+
+.card3:hover {
     transform: translate(0, 32px);
 }
 
@@ -221,15 +228,17 @@ body {
     padding: 10px;
     opacity: 0;
     transition: opacity 1s ease-in;
-    
+
 }
 
 .card1:hover .content {
     opacity: 100%;
 }
+
 .card2:hover .content {
     opacity: 100%;
 }
+
 .card3:hover .content {
     opacity: 100%;
 }
@@ -248,9 +257,11 @@ body {
 .card1:hover .projectLink {
     opacity: 100%;
 }
+
 .card2:hover .projectLink {
     opacity: 100%;
 }
+
 .card3:hover .projectLink {
     opacity: 100%;
 }
@@ -310,7 +321,7 @@ body {
 
 /* Styles for tabs */
 
-.tabs{
+.tabs {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -322,19 +333,21 @@ body {
 
 
 .tab1 {
-    position: relative;    
+    position: relative;
 }
 
 .tab2 {
     position: relative;
     right: 90px;
-    
+
 }
+
 .tab3 {
     position: relative;
     right: 180px;
     padding: 0 0 0 5px;
 }
+
 .tab4 {
     position: relative;
     width: 200px;
@@ -356,4 +369,132 @@ body {
     letter-spacing: 2px;
     color: inherit;
     text-decoration: none;
+}
+
+/* Media query for Mobile device */
+
+@media only screen and (max-width: 400px) {
+    .folder1 {
+        z-index: 1;
+    }
+
+    .folder2 {
+        z-index: 2;
+    }
+
+    .folder3 {
+        z-index: 3;
+    }
+
+    .folder4 {
+        z-index: 4;
+    }
+
+    .file {
+        width: 370px;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    /* Page alterations for mobile  */
+
+    .landingTitle {
+        line-height: 150px;
+    }
+
+    .landingTitle p {
+        margin: 50px 0 0 0;
+        font-size: 15px;
+        width: 350px;
+        line-height: 25px;
+    }
+
+    /* About Page */
+
+    .file2 h1 {
+        line-height: 100px;
+    }
+
+    .file2 p {
+        font-size: 12px;
+        width: 300px
+    }
+
+    /* Projects Page */
+
+    .file3 h1 {
+        line-height: 100px;
+    }
+
+    .file3 p {
+        width: 300px;
+        margin: 15px 0 0 15px;
+    }
+
+    .projectContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        transform: none;
+        width: 60%;
+        height: 60px;
+        transition: none;
+
+    }
+
+    .title {
+        height: 25px;
+    }
+
+    .card3 {
+        transform: none;
+    }
+
+    .projectLink {
+        opacity: 100%;
+        text-align: center;
+        height: 15px;
+        margin: -5px 0 0 0;
+    }
+
+    .card1:hover {
+        transform: none;
+    }
+
+    .card2:hover {
+        transform: none;
+    }
+
+    .card3:hover {
+        transform: none;
+    }
+
+    /* Contact page */
+
+    .file4 h1 {
+        line-height: 100px;
+    }
+    
+    .file4 p {
+        font-size: 12px;
+        width: 300px;
+        margin: 10px 0 0 15px;
+        font-size: 17px;
+    }
+
+    .contact form {
+        display: none;
+    }
+
 }
