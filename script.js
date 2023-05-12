@@ -36,3 +36,21 @@ titleTab.addEventListener('click', titleFront);
 aboutTab.addEventListener('click', aboutFront);
 projectsTab.addEventListener('click', projectsFront);
 contactTab.addEventListener('click', contactFront);
+
+// .JS for mobile device
+
+const leftButton = document.querySelector('.left');
+const rightButton = document.querySelector('.right')
+
+const titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
+const aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
+const projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
+const contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+
+function rightButtonSwitch() {
+    if (titleIndex === 1) {
+        console.log ("New Page")
+    } else {
+        console.log("Stay here")
+    }
+}

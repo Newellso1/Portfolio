@@ -25,11 +25,46 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .binder {
     display: flex;
     flex-direction: column;
+}
+
+/* Styles for buttons - Mobile only */
+
+.navButton {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    font-weight: 600;
+    color: white;
+    user-select: none;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 10px white);    
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 10px white);
 }
 
 /* Styles for the folders */
@@ -375,19 +410,20 @@ body {
 
 @media only screen and (max-width: 400px) {
     .folder1 {
+        position: absolute;
         z-index: 1;
     }
 
     .folder2 {
-        z-index: 2;
+        z-index: 0;
     }
 
     .folder3 {
-        z-index: 3;
+        z-index: 0;
     }
 
     .folder4 {
-        z-index: 4;
+        z-index: 0;
     }
 
     .file {
@@ -408,6 +444,7 @@ body {
         margin: 50px 0 0 0;
         font-size: 15px;
         width: 350px;
+        height: 150px;
         line-height: 25px;
     }
 
@@ -419,7 +456,7 @@ body {
 
     .file2 p {
         font-size: 12px;
-        width: 300px
+        width: 300px;
     }
 
     /* Projects Page */
@@ -467,7 +504,7 @@ body {
         height: 15px;
         margin: -5px 0 0 0;
     }
-
+ 
     .card1:hover {
         transform: none;
     }
@@ -495,6 +532,10 @@ body {
 
     .contact form {
         display: none;
+    }
+
+    .footer a{
+        font-size: 15px;
     }
 
 }
