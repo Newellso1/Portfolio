@@ -46,6 +46,7 @@ let titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
 let aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
 let projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
 let contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+let pages = [titlePage, aboutPage, projectsPage, contactPage];
 
 function indexReset() {
     titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
@@ -55,33 +56,37 @@ function indexReset() {
 }
 
 function rightButtonSwitch() {
-    if (titleIndex >= activePage &&
-        aboutIndex < activePage &&
-        projectsIndex < activePage &&
-        contactIndex < activePage) {
-        activePage++;
+    if (titleIndex === activePage) {
+        activePage++
         aboutPage.style.zIndex = activePage;
         indexReset();
-    } else if (titleIndex < activePage &&
-        aboutIndex >= activePage &&
-        projectsIndex < activePage &&
-        contactIndex < activePage) {
-        activePage++;
+    } else if (aboutIndex === activePage) {
+        activePage++
         projectsPage.style.zIndex = activePage;
         indexReset();
-    } else if (titleIndex < activePage &&
-        aboutIndex < activePage &&
-        projectsIndex >= activePage &&
-        contactIndex < activePage) {
-        activePage++;
-        contactPage.style.zIndex = activePage;
-        indexReset()
+    } else if (projectsIndex === activePage) {
+        activePage++
+        contactPage.style.zIndex = activePage
+        indexReset();
     }
 }
 
 function leftButtonSwitch() {
-    console.log('go left');
+    if (contactIndex > projectsIndex){
+        activePage ++;
+        projectsPage.style.zIndex = activePage;
+        indexReset();
+    } else if (projectsIndex > aboutIndex) {
+        activePage ++;
+        aboutPage.style.zIndex = activePage;
+        indexReset();        
+    } else if (aboutIndex >= activePage) {
+        activePage ++;
+        titlePage.style.zIndex = activePage;
+        indexReset();
+    }
 }
+
 
 
 rightButton.addEventListener('click', rightButtonSwitch);
