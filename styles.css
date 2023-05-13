@@ -55,7 +55,6 @@ body {
     height: 50px;
     border: 3px solid #FFFFFF70;
     border-radius: 25px;
-    box-shadow: 0 0 30px #001eff50;
     transition: all 0.4s ease;
 }
 
@@ -68,7 +67,6 @@ body {
     height: 50px;
     border: 3px solid #FFFFFF70;
     border-radius: 25px;
-    box-shadow: 0 0 30px #001eff50;
     transition: all 0.4s ease;
     
 }
@@ -552,15 +550,15 @@ body {
     }
 
     .left:active {
-        color: #FFFFFF90;
-        border: 3px solid #FFFFFF90;
-        box-shadow: 0 0 50px #001eff90;
+        color: #FFFFFF;
+        border: 3px solid #FFFFFF;
+        box-shadow: 0 0 40px #001eff60;
     }
 
     .right:active {
-        color: #FFFFFF90;
-        border: 3px solid #FFFFFF90;
-        box-shadow: 0 0 50px #001eff90;
+        color: #FFFFFF;
+        border: 3px solid #FFFFFF;
+        box-shadow: 0 0 40px #001eff60;
     }
 
     .footer a {
