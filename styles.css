@@ -84,6 +84,11 @@ body {
     z-index: 0;
 }
 
+.about2 {
+    position: absolute;
+    z-index: 0;
+}
+
 .folder2cont {
     position: absolute;
     z-index: 0;
@@ -150,6 +155,12 @@ body {
     bottom: 30px;
     left: 20px;
     text-transform: uppercase;
+    animation: typing 1.3s steps(100);
+
+}
+
+
+.titleAnimation {
     animation: typing 1.3s steps(100);
 
 }
@@ -221,7 +232,7 @@ body {
     transform: translate(0, 0);
 }
 
-.hobbyBox:hover .hobbyPicture{
+.hobbyBox:hover .hobbyPicture {
     opacity: 20%;
 }
 
@@ -480,7 +491,11 @@ body {
     .folder2 {
         z-index: 0;
     }
-    
+
+    .about2 {
+        z-index: 0;
+    }
+
     .folder3 {
         z-index: 0;
     }
@@ -525,6 +540,57 @@ body {
     .file2 .hobbies {
         display: none;
     }
+
+    /* About continued page */
+
+    .aboutCont {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+    }
+
+    .aboutCont h1 {
+        font-size: 3em;
+        font-weight: 1000;
+        letter-spacing: -9px;
+        word-spacing: 10px;
+        padding: 35px 0 0 10px;
+    }
+
+    .aboutCont .hobbies {
+        position: absolute;
+        top: 90px;
+        right: 1px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutCont .hobbyBox {
+        width: 125px;
+        height: 125px;
+    }
+
+    .aboutCont .hobbyPicture {
+        background-size: contain;
+        width: 125px;
+        height: 125px;
+    }
+
+    .aboutCont .hobbyInfo {
+        font-size: 9px;
+        text-align: center;
+        transform: translate(0, 0);
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .hobbyBox:hover .hobbyInfo {
+        transform: none;
+        opacity: 100%;
+    }
+
 
 
     /* Projects Page */

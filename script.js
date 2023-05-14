@@ -6,6 +6,7 @@ const contactTab = document.querySelector('.tab4');
 
 const titlePage = document.querySelector('.folder1');
 const aboutPage = document.querySelector('.folder2');
+const about2Page = document.querySelector('.about2');
 const projectsPage = document.querySelector('.folder3');
 const contactPage = document.querySelector('.folder4');
 
@@ -42,17 +43,63 @@ contactTab.addEventListener('click', contactFront);
 const leftButton = document.querySelector('.left');
 const rightButton = document.querySelector('.right');
 
+// let titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
+// let aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
+// let projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
+// let contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+// let pages = [titlePage, aboutPage, projectsPage, contactPage];
+
+// function indexReset() {
+//     titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
+//     aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
+//     projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
+//     contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+// }
+
+// function rightButtonSwitch() {
+//     if (titleIndex === activePage) {
+//         activePage++
+//         aboutPage.style.zIndex = activePage;
+//         indexReset();
+//     } else if (aboutIndex === activePage) {
+//         activePage++
+//         projectsPage.style.zIndex = activePage;
+//         indexReset();
+//     } else if (projectsIndex === activePage) {
+//         activePage++
+//         contactPage.style.zIndex = activePage
+//         indexReset();
+//     }
+// }
+
+// function leftButtonSwitch() {
+//     if (contactIndex > projectsIndex){
+//         activePage ++;
+//         projectsPage.style.zIndex = activePage;
+//         indexReset();
+//     } else if (projectsIndex > aboutIndex) {
+//         activePage ++;
+//         aboutPage.style.zIndex = activePage;
+//         indexReset();        
+//     } else if (aboutIndex >= activePage) {
+//         activePage ++;
+//         titlePage.style.zIndex = activePage;
+//         indexReset();
+//     }
+// }
+
 let titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
 let aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
 let projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
 let contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
-let pages = [titlePage, aboutPage, projectsPage, contactPage];
+let about2Index = parseInt(getComputedStyle(about2Page).zIndex);
 
 function indexReset() {
     titleIndex = parseInt(getComputedStyle(titlePage).zIndex);
     aboutIndex = parseInt(getComputedStyle(aboutPage).zIndex);
     projectsIndex = parseInt(getComputedStyle(projectsPage).zIndex);
     contactIndex = parseInt(getComputedStyle(contactPage).zIndex);
+    about2Index = parseInt(getComputedStyle(about2Page).zIndex);
 }
 
 function rightButtonSwitch() {
@@ -61,6 +108,10 @@ function rightButtonSwitch() {
         aboutPage.style.zIndex = activePage;
         indexReset();
     } else if (aboutIndex === activePage) {
+        activePage++
+        about2Page.style.zIndex = activePage;
+        indexReset();
+    } else if (about2Index === activePage) {
         activePage++
         projectsPage.style.zIndex = activePage;
         indexReset();
@@ -76,17 +127,20 @@ function leftButtonSwitch() {
         activePage ++;
         projectsPage.style.zIndex = activePage;
         indexReset();
-    } else if (projectsIndex > aboutIndex) {
+    } else if (projectsIndex > about2Index) {
+        activePage ++;
+        about2Page.style.zIndex = activePage;
+        indexReset();
+    } else if (about2Index > aboutIndex) {
         activePage ++;
         aboutPage.style.zIndex = activePage;
-        indexReset();        
+        indexReset();      
     } else if (aboutIndex >= activePage) {
         activePage ++;
         titlePage.style.zIndex = activePage;
         indexReset();
     }
 }
-
 
 
 rightButton.addEventListener('click', rightButtonSwitch);
